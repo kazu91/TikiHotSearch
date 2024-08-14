@@ -12,7 +12,7 @@ import SwiftData
 struct TikiHotSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            HotKeywordView()
+            HotKeywordView(viewModel: HotKeywordsViewViewModel())
         }
     }
 }

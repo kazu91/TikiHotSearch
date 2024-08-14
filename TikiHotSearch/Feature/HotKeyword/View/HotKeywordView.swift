@@ -12,32 +12,57 @@ struct HotKeywordView: View {
     
     let imageWidth: CGFloat = 120
     let titlePadding: CGFloat = 8
-    let title = "Sách Combo 2 Cuốn : Tư Duy Ngược + Tư Duy Mở (Nguyễn Anh Dũng) - SBOOKS"
+    
+    @StateObject var viewModel: HotKeywordsViewViewModel
     
     // MARK: - Body
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 0) {
-                ScrollView(.horizontal) {
-                    LazyHStack(spacing: 16) {
-                        ForEach(1..<10, id: \.self) { value in
-                            cardView
-                        }
+                if viewModel.isLoading {
+                    ProgressView {
+                        Text("Loading...")
                     }
-                    .padding(.horizontal, 16)
+                } else {
+                    listView()
+                    Spacer()
                 }
-                .frame(height: 200)
-                Spacer()
             }
             .navigationTitle("Từ khóa hot")
+            .onAppear {
+                viewModel.getKeywordList()
+            }
+            .alert("Error Occurred!", isPresented: $viewModel.isShowingError) {
+                Button("Okay") {
+                    viewModel.isShowingError = false
+                    viewModel.errorMessage = ""
+                }
+            } message: {
+                Text(viewModel.errorMessage)
+            }
         }
     }
     
     // MARK: - Views
     
-    var cardView: some View {
-        VStack {
-            WebImage(url: URL(string: "https://salt.tikicdn.com/cache/750x750/ts/product/65/c2/29/b5f8f3fe5e04758a05cf00cea66b4aa8.png")) { image in
+    func listView() -> some View {
+        ScrollView(.horizontal) {
+            LazyHStack(spacing: 16) {
+                ForEach(viewModel.keywordList.indices, id: \.self) { index in
+                    cardView(currentIndex: index)
+                }
+            }
+            .padding(.horizontal, 16)
+        }
+        .frame(height: 200)
+    }
+    
+    func cardView(currentIndex: Int) -> some View {
+        let imageUrl = viewModel.keywordList[currentIndex].icon
+        let title = viewModel.keywordList[currentIndex].name
+        let totalColor = TitleBgColor.allCases.count
+        return VStack {
+            WebImage(url: URL(string: imageUrl)) { image in
                 image.image?.resizable()
             }
             .indicator(.activity)
@@ -50,10 +75,10 @@ struct HotKeywordView: View {
                 .font(.system(size: 14, weight: .medium))
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
-                .frame(width: calculateSuitableWidth(for: title, maxWidth: imageWidth))
+                .frame(width: calculateSuitableWidth(for: title, maxWidth: imageWidth), height: calculate2LineHeight())
                 .fixedSize(horizontal: true, vertical: false)
-                .padding(.vertical)
-                .background(Color.red)
+                .padding(.vertical, titlePadding)
+                .background(TitleBgColor.allCases[currentIndex % totalColor].color)
                 .clipShape(.rect(cornerRadius: 10))
         }
     }
@@ -63,9 +88,10 @@ struct HotKeywordView: View {
     func calculateSuitableWidth(for text: String, font: UIFont = .systemFont(ofSize: 14, weight: .medium), maxWidth: CGFloat) -> CGFloat {
         let attributedText = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.font: font])
         
-        let textWidthSize = attributedText.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: .greatestFiniteMagnitude),
-                                                    options: [.usesLineFragmentOrigin, .usesFontLeading],
-                                                    context: nil).size.width
+        let textWidthSize = attributedText.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude,
+                                                                     height: .greatestFiniteMagnitude),
+                                                        options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                                        context: nil).size.width
         // just for line calculation
         let widthSizeWithPadding = textWidthSize + titlePadding * 2
         
@@ -74,8 +100,18 @@ struct HotKeywordView: View {
         return max(maxWidth, (textWidthSize / CGFloat(numberOfLines)) + titlePadding * 2).rounded(.up)
     }
     
+    
+    func calculate2LineHeight(for font: UIFont = .systemFont(ofSize: 14, weight: .medium)) -> CGFloat {
+        let attributedText = NSMutableAttributedString(string: "Hello\nHello", attributes: [NSAttributedString.Key.font: font])
+        
+        return  attributedText.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude,
+                                                         height: .greatestFiniteMagnitude),
+                                            options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                            context: nil).size.height
+    }
+    
 }
 
 #Preview {
-    HotKeywordView()
+    HotKeywordView(viewModel: HotKeywordsViewViewModel())
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64A51FAF2C6BE15100CB592E /* TikiHotSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FAE2C6BE15100CB592E /* TikiHotSearchApp.swift */; };
+		64A51FAF2C6BE15100CB592E /* TikiHotKeywordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FAE2C6BE15100CB592E /* TikiHotKeywordApp.swift */; };
 		64A51FB12C6BE15100CB592E /* HotKeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FB02C6BE15100CB592E /* HotKeywordView.swift */; };
 		64A51FB52C6BE15200CB592E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A51FB42C6BE15200CB592E /* Assets.xcassets */; };
 		64A51FB82C6BE15200CB592E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A51FB72C6BE15200CB592E /* Preview Assets.xcassets */; };
@@ -15,6 +15,13 @@
 		64A51FCC2C6BE15300CB592E /* TikiHotSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FCB2C6BE15300CB592E /* TikiHotSearchUITests.swift */; };
 		64A51FCE2C6BE15300CB592E /* TikiHotSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FCD2C6BE15300CB592E /* TikiHotSearchUITestsLaunchTests.swift */; };
 		64A51FDC2C6BE72200CB592E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 64A51FDB2C6BE72200CB592E /* SDWebImageSwiftUI */; };
+		64A51FE62C6C687300CB592E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FE52C6C687300CB592E /* Utils.swift */; };
+		64A51FE92C6C714600CB592E /* APIEnpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FE82C6C714600CB592E /* APIEnpoint.swift */; };
+		64A51FEB2C6C715C00CB592E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEA2C6C715C00CB592E /* APIClient.swift */; };
+		64A51FED2C6C752A00CB592E /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEC2C6C752A00CB592E /* KeywordModel.swift */; };
+		64A51FF02C6C77AE00CB592E /* KeywordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEF2C6C77AE00CB592E /* KeywordEndpoint.swift */; };
+		64A51FF22C6C77B800CB592E /* KeywordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF12C6C77B800CB592E /* KeywordService.swift */; };
+		64A51FF42C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF32C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		64A51FAB2C6BE15100CB592E /* TikiHotSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikiHotSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		64A51FAE2C6BE15100CB592E /* TikiHotSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikiHotSearchApp.swift; sourceTree = "<group>"; };
+		64A51FAE2C6BE15100CB592E /* TikiHotKeywordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikiHotKeywordApp.swift; sourceTree = "<group>"; };
 		64A51FB02C6BE15100CB592E /* HotKeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordView.swift; sourceTree = "<group>"; };
 		64A51FB42C6BE15200CB592E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A51FB72C6BE15200CB592E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +52,13 @@
 		64A51FC72C6BE15300CB592E /* TikiHotSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikiHotSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A51FCB2C6BE15300CB592E /* TikiHotSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikiHotSearchUITests.swift; sourceTree = "<group>"; };
 		64A51FCD2C6BE15300CB592E /* TikiHotSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikiHotSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64A51FE52C6C687300CB592E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		64A51FE82C6C714600CB592E /* APIEnpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnpoint.swift; sourceTree = "<group>"; };
+		64A51FEA2C6C715C00CB592E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		64A51FEC2C6C752A00CB592E /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
+		64A51FEF2C6C77AE00CB592E /* KeywordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordEndpoint.swift; sourceTree = "<group>"; };
+		64A51FF12C6C77B800CB592E /* KeywordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordService.swift; sourceTree = "<group>"; };
+		64A51FF32C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordsViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				64A51FDD2C6C66E300CB592E /* Feature */,
-				64A51FAE2C6BE15100CB592E /* TikiHotSearchApp.swift */,
+				64A51FE22C6C683A00CB592E /* Services */,
+				64A51FE32C6C685300CB592E /* Utils */,
+				64A51FAE2C6BE15100CB592E /* TikiHotKeywordApp.swift */,
 				64A51FB42C6BE15200CB592E /* Assets.xcassets */,
 				64A51FB62C6BE15200CB592E /* Preview Content */,
 			);
@@ -158,6 +174,7 @@
 		64A51FE02C6C673100CB592E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				64A51FF32C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -165,8 +182,44 @@
 		64A51FE12C6C673700CB592E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				64A51FEC2C6C752A00CB592E /* KeywordModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		64A51FE22C6C683A00CB592E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FE72C6C712D00CB592E /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		64A51FE32C6C685300CB592E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FE52C6C687300CB592E /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		64A51FE72C6C712D00CB592E /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FEE2C6C779D00CB592E /* KeywordService */,
+				64A51FE82C6C714600CB592E /* APIEnpoint.swift */,
+				64A51FEA2C6C715C00CB592E /* APIClient.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		64A51FEE2C6C779D00CB592E /* KeywordService */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FEF2C6C77AE00CB592E /* KeywordEndpoint.swift */,
+				64A51FF12C6C77B800CB592E /* KeywordService.swift */,
+			);
+			path = KeywordService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +359,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A51FB12C6BE15100CB592E /* HotKeywordView.swift in Sources */,
-				64A51FAF2C6BE15100CB592E /* TikiHotSearchApp.swift in Sources */,
+				64A51FF42C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift in Sources */,
+				64A51FAF2C6BE15100CB592E /* TikiHotKeywordApp.swift in Sources */,
+				64A51FE92C6C714600CB592E /* APIEnpoint.swift in Sources */,
+				64A51FEB2C6C715C00CB592E /* APIClient.swift in Sources */,
+				64A51FF02C6C77AE00CB592E /* KeywordEndpoint.swift in Sources */,
+				64A51FF22C6C77B800CB592E /* KeywordService.swift in Sources */,
+				64A51FE62C6C687300CB592E /* Utils.swift in Sources */,
+				64A51FED2C6C752A00CB592E /* KeywordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
