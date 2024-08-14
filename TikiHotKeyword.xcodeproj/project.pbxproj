@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		64A51FAF2C6BE15100CB592E /* TikiHotSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FAE2C6BE15100CB592E /* TikiHotSearchApp.swift */; };
-		64A51FB12C6BE15100CB592E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FB02C6BE15100CB592E /* ContentView.swift */; };
-		64A51FB32C6BE15100CB592E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FB22C6BE15100CB592E /* Item.swift */; };
+		64A51FB12C6BE15100CB592E /* HotKeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FB02C6BE15100CB592E /* HotKeywordView.swift */; };
 		64A51FB52C6BE15200CB592E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A51FB42C6BE15200CB592E /* Assets.xcassets */; };
 		64A51FB82C6BE15200CB592E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A51FB72C6BE15200CB592E /* Preview Assets.xcassets */; };
 		64A51FC22C6BE15200CB592E /* TikiHotSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FC12C6BE15200CB592E /* TikiHotSearchTests.swift */; };
 		64A51FCC2C6BE15300CB592E /* TikiHotSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FCB2C6BE15300CB592E /* TikiHotSearchUITests.swift */; };
 		64A51FCE2C6BE15300CB592E /* TikiHotSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FCD2C6BE15300CB592E /* TikiHotSearchUITestsLaunchTests.swift */; };
+		64A51FDC2C6BE72200CB592E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 64A51FDB2C6BE72200CB592E /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,7 @@
 /* Begin PBXFileReference section */
 		64A51FAB2C6BE15100CB592E /* TikiHotSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikiHotSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A51FAE2C6BE15100CB592E /* TikiHotSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikiHotSearchApp.swift; sourceTree = "<group>"; };
-		64A51FB02C6BE15100CB592E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		64A51FB22C6BE15100CB592E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		64A51FB02C6BE15100CB592E /* HotKeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordView.swift; sourceTree = "<group>"; };
 		64A51FB42C6BE15200CB592E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A51FB72C6BE15200CB592E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64A51FBD2C6BE15200CB592E /* TikiHotSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikiHotSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A51FDC2C6BE72200CB592E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +96,8 @@
 		64A51FAD2C6BE15100CB592E /* TikiHotSearch */ = {
 			isa = PBXGroup;
 			children = (
+				64A51FDD2C6C66E300CB592E /* Feature */,
 				64A51FAE2C6BE15100CB592E /* TikiHotSearchApp.swift */,
-				64A51FB02C6BE15100CB592E /* ContentView.swift */,
-				64A51FB22C6BE15100CB592E /* Item.swift */,
 				64A51FB42C6BE15200CB592E /* Assets.xcassets */,
 				64A51FB62C6BE15200CB592E /* Preview Content */,
 			);
@@ -130,6 +129,46 @@
 			path = TikiHotSearchUITests;
 			sourceTree = "<group>";
 		};
+		64A51FDD2C6C66E300CB592E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FDE2C6C66E900CB592E /* HotKeyword */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		64A51FDE2C6C66E900CB592E /* HotKeyword */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FE12C6C673700CB592E /* Model */,
+				64A51FE02C6C673100CB592E /* ViewModel */,
+				64A51FDF2C6C672A00CB592E /* View */,
+			);
+			path = HotKeyword;
+			sourceTree = "<group>";
+		};
+		64A51FDF2C6C672A00CB592E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FB02C6BE15100CB592E /* HotKeywordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64A51FE02C6C673100CB592E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		64A51FE12C6C673700CB592E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +185,9 @@
 			dependencies = (
 			);
 			name = TikiHotSearch;
+			packageProductDependencies = (
+				64A51FDB2C6BE72200CB592E /* SDWebImageSwiftUI */,
+			);
 			productName = TikiHotSearch;
 			productReference = 64A51FAB2C6BE15100CB592E /* TikiHotSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -209,7 +251,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 64A51FA62C6BE15100CB592E /* Build configuration list for PBXProject "TikiHotSearch" */;
+			buildConfigurationList = 64A51FA62C6BE15100CB592E /* Build configuration list for PBXProject "TikiHotKeyword" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -218,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 64A51FA22C6BE15100CB592E;
+			packageReferences = (
+				64A51FDA2C6BE72200CB592E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 64A51FAC2C6BE15100CB592E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,8 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64A51FB12C6BE15100CB592E /* ContentView.swift in Sources */,
-				64A51FB32C6BE15100CB592E /* Item.swift in Sources */,
+				64A51FB12C6BE15100CB592E /* HotKeywordView.swift in Sources */,
 				64A51FAF2C6BE15100CB592E /* TikiHotSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,17 +473,19 @@
 				DEVELOPMENT_TEAM = 66MMSGR897;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HotKeyword;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = phuphan.kazu.TikiHotSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = phuphan.kazu.HotKeyword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,17 +504,19 @@
 				DEVELOPMENT_TEAM = 66MMSGR897;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HotKeyword;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = phuphan.kazu.TikiHotSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = phuphan.kazu.HotKeyword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -555,7 +603,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64A51FA62C6BE15100CB592E /* Build configuration list for PBXProject "TikiHotSearch" */ = {
+		64A51FA62C6BE15100CB592E /* Build configuration list for PBXProject "TikiHotKeyword" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A51FCF2C6BE15300CB592E /* Debug */,
@@ -592,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64A51FDA2C6BE72200CB592E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64A51FDB2C6BE72200CB592E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64A51FDA2C6BE72200CB592E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64A51FA32C6BE15100CB592E /* Project object */;
 }
