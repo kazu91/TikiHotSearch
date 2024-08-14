@@ -4,7 +4,7 @@ A simple hot keyword application demo for iOS devices
 
 ## Application Outline
 
-Survey app for Tiki Home Assignment.
+Hot Keywords App for Tiki Home Assignment.
 
 ### Architecture
 
