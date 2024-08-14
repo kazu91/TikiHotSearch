@@ -29,8 +29,8 @@ struct HotKeywordView: View {
                 }
             }
             .navigationTitle("Từ khóa hot")
-            .onAppear {
-                viewModel.getKeywordList()
+            .task {
+                await viewModel.getKeywordList()
             }
             .alert("Error Occurred!", isPresented: $viewModel.isShowingError) {
                 Button("Okay") {

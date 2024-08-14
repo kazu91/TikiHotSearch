@@ -75,6 +75,9 @@ class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
             if httpResponse.statusCode == 401 {
                 throw APIError.accessTokenRevoked
             }
+            if httpResponse.statusCode == 404 {
+                throw APIError.clientError(message: "Invalid URL")
+            }
             throw APIError.clientError(message: httpResponse.debugDescription)
         case 500..<600:
             throw APIError.serverError

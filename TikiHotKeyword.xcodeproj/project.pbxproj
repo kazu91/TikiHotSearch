@@ -22,6 +22,17 @@
 		64A51FF02C6C77AE00CB592E /* KeywordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEF2C6C77AE00CB592E /* KeywordEndpoint.swift */; };
 		64A51FF22C6C77B800CB592E /* KeywordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF12C6C77B800CB592E /* KeywordService.swift */; };
 		64A51FF42C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF32C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift */; };
+		64A51FF82C6C912000CB592E /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF72C6C912000CB592E /* MockAPIClient.swift */; };
+		64A51FF92C6C913D00CB592E /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEC2C6C752A00CB592E /* KeywordModel.swift */; };
+		64A51FFA2C6C914100CB592E /* HotKeywordsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF32C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift */; };
+		64A51FFB2C6C914900CB592E /* KeywordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FF12C6C77B800CB592E /* KeywordService.swift */; };
+		64A51FFC2C6C914900CB592E /* KeywordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEF2C6C77AE00CB592E /* KeywordEndpoint.swift */; };
+		64A51FFD2C6C914E00CB592E /* APIEnpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FE82C6C714600CB592E /* APIEnpoint.swift */; };
+		64A51FFE2C6C914E00CB592E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FEA2C6C715C00CB592E /* APIClient.swift */; };
+		64A520002C6C919E00CB592E /* HotKeywordViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FFF2C6C919E00CB592E /* HotKeywordViewViewModelTests.swift */; };
+		64A520022C6C953700CB592E /* MockResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A520012C6C953700CB592E /* MockResponseModel.swift */; };
+		64A520042C6C956B00CB592E /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A520032C6C956B00CB592E /* APIClientTests.swift */; };
+		64A520052C6C95DD00CB592E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A51FE52C6C687300CB592E /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +70,10 @@
 		64A51FEF2C6C77AE00CB592E /* KeywordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordEndpoint.swift; sourceTree = "<group>"; };
 		64A51FF12C6C77B800CB592E /* KeywordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordService.swift; sourceTree = "<group>"; };
 		64A51FF32C6C7B6F00CB592E /* HotKeywordsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordsViewViewModel.swift; sourceTree = "<group>"; };
+		64A51FF72C6C912000CB592E /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		64A51FFF2C6C919E00CB592E /* HotKeywordViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordViewViewModelTests.swift; sourceTree = "<group>"; };
+		64A520012C6C953700CB592E /* MockResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseModel.swift; sourceTree = "<group>"; };
+		64A520032C6C956B00CB592E /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +146,10 @@
 		64A51FC02C6BE15200CB592E /* TikiHotSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				64A51FF52C6C90F700CB592E /* MockData */,
 				64A51FC12C6BE15200CB592E /* TikiHotSearchTests.swift */,
+				64A51FFF2C6C919E00CB592E /* HotKeywordViewViewModelTests.swift */,
+				64A520032C6C956B00CB592E /* APIClientTests.swift */,
 			);
 			path = TikiHotSearchTests;
 			sourceTree = "<group>";
@@ -220,6 +238,15 @@
 				64A51FF12C6C77B800CB592E /* KeywordService.swift */,
 			);
 			path = KeywordService;
+			sourceTree = "<group>";
+		};
+		64A51FF52C6C90F700CB592E /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				64A51FF72C6C912000CB592E /* MockAPIClient.swift */,
+				64A520012C6C953700CB592E /* MockResponseModel.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +401,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A51FFD2C6C914E00CB592E /* APIEnpoint.swift in Sources */,
+				64A51FFE2C6C914E00CB592E /* APIClient.swift in Sources */,
 				64A51FC22C6BE15200CB592E /* TikiHotSearchTests.swift in Sources */,
+				64A51FF82C6C912000CB592E /* MockAPIClient.swift in Sources */,
+				64A51FF92C6C913D00CB592E /* KeywordModel.swift in Sources */,
+				64A520002C6C919E00CB592E /* HotKeywordViewViewModelTests.swift in Sources */,
+				64A520042C6C956B00CB592E /* APIClientTests.swift in Sources */,
+				64A520022C6C953700CB592E /* MockResponseModel.swift in Sources */,
+				64A51FFA2C6C914100CB592E /* HotKeywordsViewViewModel.swift in Sources */,
+				64A51FFB2C6C914900CB592E /* KeywordService.swift in Sources */,
+				64A51FFC2C6C914900CB592E /* KeywordEndpoint.swift in Sources */,
+				64A520052C6C95DD00CB592E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +631,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66MMSGR897;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = phuphan.kazu.TikiHotSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,7 +651,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66MMSGR897;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = phuphan.kazu.TikiHotSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -30,4 +30,9 @@ struct Keyword: Codable, Hashable, Identifiable {
         icon = try values.decode(String.self, forKey: .icon)
         name = try values.decode(String.self, forKey: .name)
     }
+    
+    init(icon: String, name: String) {
+        self.icon = icon
+        self.name = name
+    }
 }
